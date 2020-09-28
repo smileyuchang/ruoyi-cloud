@@ -1,0 +1,30 @@
+spring:
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      druid:
+        MASTER:  #数据源1
+          url: jdbc:mysql://localhost:3306/ry_cloud_0115?useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: Yuchang726
+        SLAVE:  #数据源2
+          url: jdbc:mysql://localhost:3306/ry_cloud_0115?useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: Yuchang726
+        initialSize: 10
+        maxActive: 100
+        minIdle: 10
+        maxWait: 60000
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        maxEvictableIdleTimeMillis: 360000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        slave:
+          enabled: false
+
+
