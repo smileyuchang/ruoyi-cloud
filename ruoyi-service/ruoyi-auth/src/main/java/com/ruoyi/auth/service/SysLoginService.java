@@ -26,6 +26,9 @@ public class SysLoginService
 
     @Autowired
     private RemoteUserService  userService;
+    public SysUser test(String username){
+        return userService.selectSysUserByUsername(username);
+    }
 
     /**
      * 登录

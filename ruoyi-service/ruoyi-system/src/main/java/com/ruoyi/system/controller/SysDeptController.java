@@ -38,7 +38,6 @@ public class SysDeptController extends BaseController
     {
         return sysDeptService.selectDeptById(deptId);
     }
-
     /**
      * 查询部门列表
      */
@@ -107,5 +106,11 @@ public class SysDeptController extends BaseController
     public String handleException(BlockException blockException){
         System.out.println("限流或降级了");
         return "限流或降级了";
+    }
+
+    @GetMapping("test")
+    public R test()
+    {
+        return R.ok("微服务调用成功");
     }
 }

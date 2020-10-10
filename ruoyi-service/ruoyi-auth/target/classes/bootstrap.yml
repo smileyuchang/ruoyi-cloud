@@ -4,8 +4,8 @@ server:
 logging:
   level:
     com.ruoyi: debug
-    org.springframework: warn 
-    com.alibaba.nacos.client.naming: error 
+    org.springframework: warn
+    com.alibaba.nacos.client.naming: error
 spring:
   application:
     name: ruoyi-auth
@@ -23,13 +23,38 @@ spring:
         file-extension: yml
       discovery:
         server-addr: 127.0.0.1:8848
-  profiles: 
+    sentinel:
+      transport: #dashboard地址
+        dashboard: localhost:8858
+        ports:
+          - 8858:8858
+      datasource: #sentinel持久化
+        dsl:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            data_type: json
+            rule-type: flow
+        dsl2:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloudalibaba-sentinel-service-degrade
+            groupId: DEFAULT_GROUP
+            data_type: json
+            rule-type: degrade
+  feign:
+    hystrix:
+      enabled: true
+    sentinel:
+      enabled: true # 添加feign对sentinel的支持
+  profiles:
     active: dev
   main:
     allow-bean-definition-overriding: true
-  
-feign: 
-  hystrix: 
+
+feign:
+  hystrix:
     enabled: true
 
 aj:
@@ -37,5 +62,5 @@ aj:
   water-mark: zmrit.com
   interference-options: 2
 
-    
- 
+
+

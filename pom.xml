@@ -241,7 +241,9 @@
 		<module>ruoyi-service-api</module>
 		<module>ruoyi-service</module>
 		<module>ruoyi-tool</module>
-	</modules>
+        <module>ruoyi-demo</module>
+        <module>ruoyi-service/ruoyi-demo</module>
+    </modules>
 	<packaging>pom</packaging>
 
 

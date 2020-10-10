@@ -2,6 +2,7 @@ package com.ruoyi.system.feign;
 
 import java.util.Set;
 
+import com.ruoyi.system.feign.sentinelFallback.userServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import com.ruoyi.system.feign.factory.RemoteUserFallbackFactory;
  * @author zmr
  * @date 2019-05-20
  */
-@FeignClient(name = ServiceNameConstants.SYSTEM_SERVICE, fallbackFactory = RemoteUserFallbackFactory.class)
+@FeignClient(name = ServiceNameConstants.SYSTEM_SERVICE,fallback = userServiceFallback.class,fallbackFactory = RemoteUserFallbackFactory.class)
 public interface RemoteUserService
 {
     @GetMapping("user/get/{userId}")

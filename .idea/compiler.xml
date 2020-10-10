@@ -8,16 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ruoyi-activiti" />
         <module name="ruoyi-system" />
-        <module name="ruoyi-common-swagger" />
         <module name="ruoyi-common-core" />
+        <module name="ruoyi-common-swagger" />
         <module name="ruoyi-gen" />
         <module name="ruoyi-system-api" />
-        <module name="ruoyi-common-redis" />
+        <module name="ruoyi-demo" />
         <module name="ruoyi-gateway" />
         <module name="ruoyi-dfs" />
         <module name="ruoyi-common-log" />
-        <module name="ruoyi-auth" />
         <module name="ruoyi-common-auth" />
+        <module name="ruoyi-auth" />
+        <module name="ruoyi-common-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="ruoyi-common-log" target="1.8" />
       <module name="ruoyi-common-redis" target="1.8" />
       <module name="ruoyi-common-swagger" target="1.8" />
+      <module name="ruoyi-demo" target="1.8" />
       <module name="ruoyi-dfs" target="1.8" />
       <module name="ruoyi-gateway" target="1.8" />
       <module name="ruoyi-gen" target="1.8" />
