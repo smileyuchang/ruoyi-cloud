@@ -1,0 +1,105 @@
+server:
+  port: 2002
+# 日志配置
+logging:
+  level:
+    com.ruoyi: debug
+    org.springframework: warn
+    com.alibaba.nacos.client.naming: error
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: Yuchang726
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: ruoyi-storage
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      maxFileSize: 5MB  #单位必须大写MB或不写(即为B)
+      maxRequestSize: 10MB
+
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+      discovery:
+        server-addr: 127.0.0.1:8848
+    alibaba:
+      seata:
+        enabled: true
+        application-id: ${spring.application.name}
+        tx-service-group: my_test_tx_group
+        enable-auto-data-source-proxy: true
+        service:
+          vgroup-mapping:
+            my_test_tx_group: default  # 此处key需要与tx-service-group的value一致，否则会报 no available service 'null' found, please make sure registry config correct 异常
+          grouplist:
+            default: 127.0.0.1:8091
+          enable-degrade: false
+          disable-global-transaction: false
+        config:
+          type: nacos
+          nacos:
+            namespace:
+            serverAddr: 127.0.0.1:8848
+            group: SEATA_GROUP
+            userName: ""
+            password: ""
+        registry:
+          type: nacos
+          nacos:
+            application: seata-server  # 此处名称需和 seata server 服务端 application一致,否则会报 no available service 'null' found, please make sure registry config correct 异常
+            server-addr: 127.0.0.1:8848
+            namespace:
+            userName: ""
+            password: ""
+    sentinel:
+      transport: #dashboard地址
+        dashboard: localhost:8858
+        ports:
+          - 8858:8858
+feign:
+  hystrix:
+    enabled: true
+  sentinel:
+    enabled: true # 添加feign对sentinel的支持
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' 
+
+
+# MyBatis
+mybatis:
+    # 搜索指定包别名
+    typeAliasesPackage: com.ruoyi
+    # 配置mapper的扫描，找到所有的mapper.xml映射文件
+    mapperLocations: classpath*:mapper/**/*Mapper.xml
+
+mapper:
+  not-empty: true
+  identity: MYSQL
+
+# PageHelper分页插件
+pagehelper: 
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

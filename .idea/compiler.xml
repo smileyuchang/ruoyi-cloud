@@ -2,26 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ruoyi-activiti" />
-        <module name="ruoyi-system" />
-        <module name="ruoyi-common-core" />
+        <module name="ruoyi-storage" />
         <module name="ruoyi-common-swagger" />
-        <module name="ruoyi-gen" />
-        <module name="ruoyi-system-api" />
-        <module name="ruoyi-demo" />
-        <module name="ruoyi-gateway" />
-        <module name="ruoyi-dfs" />
         <module name="ruoyi-common-log" />
         <module name="ruoyi-common-auth" />
+        <module name="ruoyi-demo" />
+        <module name="ruoyi-system-api" />
+        <module name="ruoyi-order" />
+        <module name="ruoyi-common-core" />
         <module name="ruoyi-auth" />
+        <module name="ruoyi-gen" />
+        <module name="ruoyi-account" />
+        <module name="ruoyi-gateway" />
+        <module name="ruoyi-system" />
+        <module name="ruoyi-dfs" />
         <module name="ruoyi-common-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ruoyi-account" target="1.8" />
       <module name="ruoyi-activiti" target="1.8" />
       <module name="ruoyi-auth" target="1.8" />
       <module name="ruoyi-cloud" target="1.8" />
@@ -35,8 +40,10 @@
       <module name="ruoyi-dfs" target="1.8" />
       <module name="ruoyi-gateway" target="1.8" />
       <module name="ruoyi-gen" target="1.8" />
+      <module name="ruoyi-order" target="1.8" />
       <module name="ruoyi-service" target="1.8" />
       <module name="ruoyi-service-api" target="1.8" />
+      <module name="ruoyi-storage" target="1.8" />
       <module name="ruoyi-system" target="1.8" />
       <module name="ruoyi-system-api" target="1.8" />
       <module name="ruoyi-tool" target="1.8" />

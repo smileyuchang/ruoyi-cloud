@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-account/ruoyi-account.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-account/ruoyi-account.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-activiti/ruoyi-activiti.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-activiti/ruoyi-activiti.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-auth/ruoyi-auth.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-auth/ruoyi-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-cloud.iml" filepath="$PROJECT_DIR$/ruoyi-cloud.iml" />
@@ -14,8 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-dfs/ruoyi-dfs.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-dfs/ruoyi-dfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-gateway/ruoyi-gateway.iml" filepath="$PROJECT_DIR$/ruoyi-gateway/ruoyi-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-gen/ruoyi-gen.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-gen/ruoyi-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-order/ruoyi-order.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-order/ruoyi-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-service.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service-api/ruoyi-service-api.iml" filepath="$PROJECT_DIR$/ruoyi-service-api/ruoyi-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-storage/ruoyi-storage.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-storage/ruoyi-storage.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service/ruoyi-system/ruoyi-system.iml" filepath="$PROJECT_DIR$/ruoyi-service/ruoyi-system/ruoyi-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-service-api/ruoyi-system-api/ruoyi-system-api.iml" filepath="$PROJECT_DIR$/ruoyi-service-api/ruoyi-system-api/ruoyi-system-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruoyi-tool/ruoyi-tool.iml" filepath="$PROJECT_DIR$/ruoyi-tool/ruoyi-tool.iml" />
